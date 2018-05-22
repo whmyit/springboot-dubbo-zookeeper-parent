@@ -1,8 +1,8 @@
-package com.whmyit.springdubboservice.service;
+package com.whmyit.common.service;
 
 
 
-import com.whmyit.springdubboservice.entity.SysInfo;
+import com.whmyit.common.entity.SysInfo;
 
 import java.util.List;
 

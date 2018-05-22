@@ -1,7 +1,7 @@
 package com.whmyit.springdubboclient.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.whmyit.springdubboservice.service.InfoService;
+import com.whmyit.common.service.InfoService;
 import org.springframework.stereotype.Component;
 
 /**

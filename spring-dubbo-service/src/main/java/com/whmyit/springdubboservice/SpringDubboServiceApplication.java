@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ImportResource;
 
 
 @SpringBootApplication
-@ImportResource("classpath:provider.xml")
+@ImportResource("classpath:providers.xml")
 public class SpringDubboServiceApplication {
 
 	public static void main(String[] args) throws Exception {

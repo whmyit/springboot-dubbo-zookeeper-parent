@@ -19,6 +19,7 @@
 	<modules>
 		<module>spring-dubbo-client</module>
 		<module>spring-dubbo-service</module>
+		<module>common</module>
 	</modules>
 
 
@@ -77,6 +78,13 @@
 				<!--<version>0.10</version>-->    <!--使用properties中配置的版本号-->
 				<version>${zkclient.version}</version>
 			</dependency>
+
+			<!--<dependency>-->
+				<!--<groupId>com.whmyit</groupId>-->
+				<!--<artifactId>spring-dubbo-service</artifactId>-->
+				<!--<version>0.0.1-SNAPSHOT</version>-->
+			<!--</dependency>-->
+
 		</dependencies>
 	</dependencyManagement>
 

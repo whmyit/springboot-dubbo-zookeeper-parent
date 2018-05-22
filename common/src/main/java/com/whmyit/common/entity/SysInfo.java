@@ -1,4 +1,4 @@
-package com.whmyit.springdubboservice.entity;
+package com.whmyit.common.entity;
 
 import java.io.Serializable;
 

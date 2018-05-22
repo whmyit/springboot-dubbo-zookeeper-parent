@@ -19,10 +19,10 @@
     <dubbo:annotation package="com.whmyit.springdubboservice.service"  />
 
 
-    <!--这种方式手工导入 -->
-    <!-- 和本地 bean 一样实现服务 -->
-    <!--<bean id="infoService" class="com.yrton.service.impl.InfoServiceImpl" />-->
+    <!--&lt;!&ndash;这种方式手工导入 &ndash;&gt;-->
+     <!--&lt;!&ndash;和本地 bean 一样实现服务&ndash;&gt;-->
+    <!--<bean id="infoService" class="com.whmyit.springdubboservice.service.impl.InfoServiceImpl" />-->
     <!--&lt;!&ndash; 声明需要暴露的服务接口 &ndash;&gt;-->
-    <!--<dubbo:service interface="com.yrton.service.ints.InfoService" ref="infoService" timeout="10000"/>-->
+    <!--<dubbo:service interface="com.whmyit.common.service.InfoService" ref="infoService" timeout="10000"/>-->
 
 </beans>

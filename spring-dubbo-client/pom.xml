@@ -58,11 +58,10 @@
 			<!--<version>0.10</version>-->
 		</dependency>
 
-
 		<!--消费者需要依赖生产者 service模块-->
 		<dependency>
 			<groupId>com.whmyit</groupId>
-			<artifactId>spring-dubbo-service</artifactId>
+			<artifactId>common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
@@ -72,6 +71,18 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- 指定该Main Class为全局的唯一入口 -->
+					<mainClass>com.whmyit.springdubboclient.SpringDubboClientApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+						</goals>
+					</execution>
+				</executions>
+
 			</plugin>
 		</plugins>
 	</build>

@@ -1,8 +1,8 @@
 package com.whmyit.springdubboservice.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.whmyit.springdubboservice.entity.SysInfo;
-import com.whmyit.springdubboservice.service.InfoService;
+import com.whmyit.common.entity.SysInfo;
+import com.whmyit.common.service.InfoService;
 
 import java.util.List;
 
