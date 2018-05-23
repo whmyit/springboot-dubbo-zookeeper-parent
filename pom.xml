@@ -19,7 +19,7 @@
 	<modules>
 		<module>spring-dubbo-client</module>
 		<module>spring-dubbo-service</module>
-		<module>common</module>
+		<module>spring-dubbo-api</module>
 	</modules>
 
 
@@ -29,7 +29,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.9.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<!--<relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;-->
 	</parent>
 
 
@@ -41,6 +41,8 @@
 		<!-- 在properties中统一控制依赖包的版本，更清晰-->
 		<dubbo.version>2.5.10</dubbo.version>
 		<zkclient.version>0.10</zkclient.version>
+		<mybatis.version>1.1.1</mybatis.version>
+		<mysql.version>6.0.6</mysql.version>
 	</properties>
 
 	<!--dependencyManagement用于管理依赖版本号-->
@@ -77,6 +79,21 @@
 				<artifactId>zkclient</artifactId>
 				<!--<version>0.10</version>-->    <!--使用properties中配置的版本号-->
 				<version>${zkclient.version}</version>
+			</dependency>
+
+			<!-- mybatis -->
+			<!--<dependency>-->
+				<!--<groupId>org.mybatis.spring.boot</groupId>-->
+				<!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+				<!--<version>${mybatis.version}}</version>-->
+			<!--</dependency>-->
+
+
+			<!-- mysql链接 -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
 			</dependency>
 
 			<!--<dependency>-->

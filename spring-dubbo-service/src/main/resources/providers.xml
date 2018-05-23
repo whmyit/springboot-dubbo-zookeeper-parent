@@ -16,13 +16,13 @@
 
     <!--暴露dubbo服务的方式-->
     <!-- 使用注解方式暴露接口，会自动扫描package下所有包中dubbo相关的注解，这样就不用在xml中再针对每个服务接口配置dubbo:service interface-->
-    <dubbo:annotation package="com.whmyit.springdubboservice.service"  />
+    <dubbo:annotation package="com.whmyit.service.service"  />
 
 
     <!--&lt;!&ndash;这种方式手工导入 &ndash;&gt;-->
      <!--&lt;!&ndash;和本地 bean 一样实现服务&ndash;&gt;-->
-    <!--<bean id="infoService" class="com.whmyit.springdubboservice.service.impl.InfoServiceImpl" />-->
+    <!--<bean id="infoService" class="com.whmyit.servicepl.InfoServiceImpl" />-->
     <!--&lt;!&ndash; 声明需要暴露的服务接口 &ndash;&gt;-->
-    <!--<dubbo:service interface="com.whmyit.common.service.InfoService" ref="infoService" timeout="10000"/>-->
+    <!--<dubbo:service interface="com.whmyit.apirvice.InfoService" ref="infoService" timeout="10000"/>-->
 
 </beans>

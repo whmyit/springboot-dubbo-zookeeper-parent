@@ -1,4 +1,4 @@
-package com.whmyit.common.entity;
+package com.whmyit.api.entity;
 
 import java.io.Serializable;
 

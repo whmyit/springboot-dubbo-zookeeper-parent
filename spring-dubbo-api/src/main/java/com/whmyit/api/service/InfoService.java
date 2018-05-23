@@ -1,8 +1,8 @@
-package com.whmyit.common.service;
+package com.whmyit.api.service;
 
 
 
-import com.whmyit.common.entity.SysInfo;
+import com.whmyit.api.entity.SysInfo;
 
 import java.util.List;
 

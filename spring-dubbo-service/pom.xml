@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.whmyit</groupId>
+	<groupId>com.whmyit.service</groupId>
 	<artifactId>spring-dubbo-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -17,7 +17,7 @@
 		<groupId>com.whmyit</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
+		<!--<relativePath>../pom.xml</relativePath>-->
 	</parent>
 
 	<dependencies>
@@ -55,10 +55,23 @@
 
 		<!--消费者需要依赖生产者 service模块-->
 		<dependency>
-			<groupId>com.whmyit</groupId>
-			<artifactId>common</artifactId>
+			<groupId>com.whmyit.api</groupId>
+			<artifactId>spring-dubbo-api</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+
+
+		<!-- mybatis -->
+		<!--<dependency>-->
+			<!--<groupId>org.mybatis.spring.boot</groupId>-->
+			<!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+		<!--</dependency>-->
+
+		<!-- mysql链接 -->
+		<!--<dependency>-->
+			<!--<groupId>mysql</groupId>-->
+			<!--<artifactId>mysql-connector-java</artifactId>-->
+		<!--</dependency>-->
 
 	</dependencies>
 
@@ -69,7 +82,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<!-- 指定该Main Class为全局的唯一入口 -->
-					<mainClass>com.whmyit.springdubboservice.SpringDubboClientApplication</mainClass>
+					<mainClass>com.whmyit.service.SpringDubboClientApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>
@@ -78,7 +91,16 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
 
+			<!--maven打包跳过测试-->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+				<configuration>
+					<skipTests>true</skipTests>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

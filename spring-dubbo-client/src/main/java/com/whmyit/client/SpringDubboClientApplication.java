@@ -1,7 +1,7 @@
-package com.whmyit.springdubboclient;
+package com.whmyit.client;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.whmyit.common.service.InfoService;
+import com.whmyit.api.service.InfoService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
