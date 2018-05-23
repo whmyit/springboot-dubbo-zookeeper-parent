@@ -17,8 +17,8 @@ public class SpringDubboClientApplication {
 	InfoService infoService;
 
 	@GetMapping("/test")
-	public String canBuy(){
-		return infoService.SayHello("hello word");
+	public Object canBuy(){
+		return infoService.getAll();
 	}
 
 	public static void main(String[] args) {

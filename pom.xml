@@ -42,7 +42,7 @@
 		<dubbo.version>2.5.10</dubbo.version>
 		<zkclient.version>0.10</zkclient.version>
 		<mybatis.version>1.1.1</mybatis.version>
-		<mysql.version>6.0.6</mysql.version>
+		<mysql-connector>5.1.39</mysql-connector>
 	</properties>
 
 	<!--dependencyManagement用于管理依赖版本号-->
@@ -82,18 +82,19 @@
 			</dependency>
 
 			<!-- mybatis -->
-			<!--<dependency>-->
-				<!--<groupId>org.mybatis.spring.boot</groupId>-->
-				<!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
-				<!--<version>${mybatis.version}}</version>-->
-			<!--</dependency>-->
+			<!-- mybatis -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
 
 
 			<!-- mysql链接 -->
 			<dependency>
 				<groupId>mysql</groupId>
 				<artifactId>mysql-connector-java</artifactId>
-				<version>${mysql.version}</version>
+				<version>${mysql-connector}</version>
 			</dependency>
 
 			<!--<dependency>-->
