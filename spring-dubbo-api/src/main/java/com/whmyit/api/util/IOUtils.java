@@ -91,7 +91,7 @@ public class IOUtils {
         }
 
         FileInputStream in=new FileInputStream(srcFile);
-        InputStreamReader reder=new InputStreamReader(in, ConstChar.GBK);
+        InputStreamReader reder=new InputStreamReader(in);
 
         //批量读取
         char[] buffer=new char[8*1024];
@@ -104,6 +104,30 @@ public class IOUtils {
         }
 
 
+
+    }
+
+
+    /**
+     * 遍历目录中的所有文件 字节流
+     * @param file
+     * @throws IOException
+     */
+    public static void listDirectory(File file)throws IOException{
+        if(!file.exists())
+            throw new IllegalArgumentException("目录 "+file+" 不存在");
+        if(!file.isDirectory())
+            throw new IllegalArgumentException(file+"  不是目录");
+
+        File[] files =file.listFiles();
+        if(files!=null && files.length>0){
+            for (File filedir:files) {
+                if(filedir.isDirectory())
+                    listDirectory(filedir);
+                else
+                    System.out.println(filedir);
+            }
+        }
 
     }
 

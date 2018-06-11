@@ -7,11 +7,20 @@ import java.io.Serializable;
  * @Description: 系统参数
  * @Date: Created in 14:56  2018/3/29
  */
-public class SysInfo implements Serializable {
+public class SysInfo{
 
     private Integer id;
     private String email;
     private Integer phone;
+
+    public SysInfo(){
+
+    }
+    public SysInfo(Integer id, String email, Integer phone) {
+        this.id = id;
+        this.email = email;
+        this.phone = phone;
+    }
 
     public Integer getId() {
         return id;
