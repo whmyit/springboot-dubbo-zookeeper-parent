@@ -186,7 +186,7 @@ public class FileUtils {
 
 
      /**
-      * 序列化对象
+      * 反序列化对象
       */
      public static Object  deObjectSeria()throws Exception{
           Object obj=new Object();

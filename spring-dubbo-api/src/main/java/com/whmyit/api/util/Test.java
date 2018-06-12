@@ -29,9 +29,16 @@ public class Test {
 //        FileUtils.objectSeria(sy);
 
         //反序列化
-        StuSeria sy=new StuSeria();
-        sy= (StuSeria) FileUtils.deObjectSeria();
-        System.out.println(sy);
+//        StuSeria sy=new StuSeria();
+//        sy= (StuSeria) FileUtils.deObjectSeria();
+//        System.out.println(sy);
+
+
+        System.out.println(1000*Math.random());
+        System.out.println(1000*Math.random());
+        System.out.println(1000*Math.random());
+        System.out.println(1000*Math.random());
+        System.out.println(1000*Math.random());
 
 
 
