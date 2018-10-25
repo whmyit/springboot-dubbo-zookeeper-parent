@@ -21,7 +21,14 @@ public class SpringDubboClientApplication {
 		return infoService.getAll();
 	}
 
+	@GetMapping("/sayHello")
+	public Object sayHello(){
+		return infoService.SayHello("你好jay！");
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDubboClientApplication.class, args);
+		System.out.println("---------------------------------------------");
 	}
+
 }

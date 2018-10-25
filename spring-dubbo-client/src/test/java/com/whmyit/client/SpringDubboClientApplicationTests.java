@@ -1,4 +1,4 @@
-package com.whmyit.springdubboservice;
+package com.whmyit.client;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SpringDubboServiceApplicationTests {
+public class SpringDubboClientApplicationTests {
 
 	@Test
 	public void contextLoads() {

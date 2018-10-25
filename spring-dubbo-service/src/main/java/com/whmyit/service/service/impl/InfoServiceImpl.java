@@ -3,6 +3,7 @@ package com.whmyit.service.service.impl;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.whmyit.api.entity.SysInfo;
 import com.whmyit.api.service.InfoService;
+import com.whmyit.api.util.JavaService;
 import com.whmyit.service.dao.SysInfoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -28,6 +29,7 @@ public class InfoServiceImpl implements InfoService {
 
     @Override
     public String SayHello(String string) {
+        JavaService.getSystenProper();
         return "多模块项目 hello "+string;
     }
 }

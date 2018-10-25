@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @Description: 系统参数
  * @Date: Created in 14:56  2018/3/29
  */
-public class SysInfo{
+public class SysInfo implements Serializable{
 
     private Integer id;
     private String email;
