@@ -48,6 +48,13 @@
 	<!--dependencyManagement用于管理依赖版本号-->
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>1.5.9.RELEASE</version>
+			</dependency>
+
 			<!-- 删除spring-boot-starter和spring-boot-starter-test，
             因为parent中继承的祖先中已经有了，并且一般dependencyManagement管理的依赖都要写版本号 -->
 			<!--<dependency>-->
@@ -102,6 +109,11 @@
 				<!--<artifactId>spring-dubbo-service</artifactId>-->
 				<!--<version>0.0.1-SNAPSHOT</version>-->
 			<!--</dependency>-->
+
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-aop</artifactId>
+			</dependency>
 
 		</dependencies>
 	</dependencyManagement>

@@ -1,7 +1,8 @@
 package com.whmyit.api.util;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
-import java.util.Set;
 
 /**
  * @Author: whmyit@163.com
@@ -17,12 +18,15 @@ public class JavaService {
      *
      * @return 返回  Set<Object>
      */
-    public static Set<Object> getSystenProper() {
+    public static Map<String, String> getSystenProper() {
+        Map<String,String> map =new HashMap<String,String>();
+
         for (Object object : props.keySet()) {
             String property = props.getProperty(object.toString());
-            System.out.println(object.toString() + " : " + property);
+            //System.out.println(object.toString() + " : " + property);
+            map.put(object.toString(),property);
         }
-        return props.keySet();
+        return map;
     }
 
     /**

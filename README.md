@@ -1,10 +1,13 @@
 ＃springboot-dubbo-zookeeper-parent spring boot多模块
 
+
 多模块化项目 
   ----  spring-dubbo-client  消费者
+  
      ---- 项目启动时注册dubbo的服务到zookeeper 
      
   ----  spring-dubbo-service 生产者
+  
      ---- 配置pom文件依赖消费者的service
      ---- 调用zookeeper中的dubbo服务     
      
@@ -12,7 +15,7 @@
   
   
   
-spring-dubbo-api
+## spring-dubbo-api
 
     /constant  目录包含可能常用的常量
         ConstChar   用于文本的编码格式  ConstChar.GBK， ConstChar.UTF_8 等
