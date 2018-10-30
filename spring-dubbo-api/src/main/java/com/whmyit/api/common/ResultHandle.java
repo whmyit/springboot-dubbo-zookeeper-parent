@@ -1,5 +1,6 @@
 package com.whmyit.api.common;
 
+import com.whmyit.api.util.GlobalResultUtil;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -22,13 +23,13 @@ public class ResultHandle implements ResponseBodyAdvice<Object> {
     }
 
     @Override
-    public Object beforeBodyWrite(Object o, MethodParameter methodParameter, MediaType mediaType, Class<? extends HttpMessageConverter<?>> aClass, ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
-        if(o instanceof GlobalResult){
-            GlobalResult<Object> result=(GlobalResult<Object>)o;
-            if(!result.getStatus().equals("0"));
+    public Object beforeBodyWrite(Object object, MethodParameter methodParameter, MediaType mediaType, Class<? extends HttpMessageConverter<?>> aClass, ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
+        if(object instanceof GlobalResult){
+            GlobalResult<Object> result=(GlobalResult<Object>)object;
+            if(!(result.getCode()==0));
             return result;
         }
 
-        return new GlobalResult<Object>("0","请求成功！",o);
+        return GlobalResultUtil.success(object);
     }
 }

@@ -7,7 +7,7 @@ package com.whmyit.api.common;
  */
 public class GlobalResult<T> {
 
-    private String status;
+    private Integer code;
     private String msg;
     private T data;
 
@@ -15,19 +15,23 @@ public class GlobalResult<T> {
     public GlobalResult() {
     }
 
-    public GlobalResult(String status, String msg) {
-        this.status = status;
+    public GlobalResult(Integer code, String msg) {
+        this.code = code;
         this.msg = msg;
     }
 
-    public GlobalResult(String status, String msg, T data) {
-        this.status = status;
+    public GlobalResult(Integer code, String msg, T data) {
+        this.code = code;
         this.msg = msg;
         this.data = data;
     }
 
-    public String getStatus() {
-        return status;
+    public Integer getCode() {
+        return code;
+    }
+
+    public void setCode(Integer code) {
+        this.code = code;
     }
 
     public String getMsg() {
@@ -49,7 +53,7 @@ public class GlobalResult<T> {
     @Override
     public String toString() {
         return "GlobalResult{" +
-                "status=" + status +
+                "code=" + code +
                 ", msg='" + msg + '\'' +
                 ", data=" + data +
                 '}';

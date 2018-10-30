@@ -7,11 +7,15 @@ import com.whmyit.api.Enum.ResultEnum;
  * @Description: 自定义异常
  * @Date: Created in 15:22  2018/10/29
  */
-public class MyException extends BaseException {
+public class BaseException extends RuntimeException {
 
     private Integer code;
 
-    public MyException (ResultEnum resultEnum){
+    BaseException(String msg){
+        super(msg);
+    }
+
+    public BaseException(ResultEnum resultEnum){
         super(resultEnum.getMsg());
         this.code = resultEnum.getCode();
     }

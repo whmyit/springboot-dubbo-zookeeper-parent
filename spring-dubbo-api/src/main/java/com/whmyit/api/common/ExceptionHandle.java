@@ -1,5 +1,6 @@
 package com.whmyit.api.common;
 
+import com.whmyit.api.util.GlobalResultUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -19,12 +20,12 @@ public class ExceptionHandle {
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
     public GlobalResult<Object> exceptionHandle(Exception e) {
-        if (e instanceof MyException) {
-            MyException mye = (MyException) e;
-            return new GlobalResult(mye.getCode(), mye.getMessage());
+        if (e instanceof BaseException) {
+            BaseException mye = (BaseException) e;
+            return GlobalResultUtil.error(mye.getCode(), mye.getMessage());
         } else {
             LOGGER.error("【系统异常】{}",e);
-            return new GlobalResult("-1", "未知错误");
+            return GlobalResultUtil.error(-1, "未知错误");
         }
     }
 
