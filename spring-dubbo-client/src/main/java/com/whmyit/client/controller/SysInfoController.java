@@ -15,8 +15,8 @@ public class SysInfoController {
 
     @GetMapping("/sysInfo")
     private Object SysInfo() {
-        Integer a=0;
-        System.out.println(5/a);
+        //Integer a=0;
+        //System.out.println(5/a);
         return JavaService.getSystenProper();
     }
 
