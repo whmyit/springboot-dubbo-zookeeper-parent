@@ -1,7 +1,5 @@
 package com.whmyit.client.controller;
 
-import com.whmyit.api.Enum.ResultEnum;
-import com.whmyit.api.common.MyException;
 import com.whmyit.api.util.JavaService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,10 +17,9 @@ public class SysInfoController {
     private Object SysInfo() {
         Integer a=0;
         //System.out.println(5/a);
-        if(a==0){
-            throw new MyException(ResultEnum.UNKONW_ERROR);
-
-        }
+        //if(a==0){
+        //    throw new MyException(ResultEnum.UNKONW_ERROR);
+        //}
         return JavaService.getSystenProper();
     }
 

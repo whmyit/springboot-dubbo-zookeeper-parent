@@ -3,16 +3,19 @@ package com.whmyit.api.Enum;
 /**
  * @Author: whmyit@163.com
  * @Description:
- * @Date: Created in 17:31  2018/10/30
+ * @Date: Created in 10:49  2018/11/12
  */
-public enum BaseEnum {
-    UNKONW_ERROR(-1,"位置错误"),
-    SUCCESS(0,"成功"),
+public enum SeckillEnum {
+    SUCCESS(1,"秒杀成功"),
+    END(0,"秒杀结束"),
+    REPEAT_KILL(-1,"重复秒杀"),
+    INNER_ERROR(-2,"系统异常"),
+    DATE_REWRITE(-3,"数据篡改");
     ;
     private Integer code;
     private String  msg;
 
-    BaseEnum(Integer code,String msg){
+    SeckillEnum(Integer code,String msg){
         this.code=code;
         this.msg = msg;
     }
@@ -24,4 +27,5 @@ public enum BaseEnum {
     public String getMsg() {
         return msg;
     }
+
 }

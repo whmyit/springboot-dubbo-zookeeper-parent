@@ -1,5 +1,8 @@
-package com.whmyit.api.common;
+package com.whmyit.api.handle;
 
+import com.whmyit.api.Enum.ResultEnum;
+import com.whmyit.api.common.GlobalResult;
+import com.whmyit.api.exception.BaseException;
 import com.whmyit.api.util.GlobalResultUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ControllerAdvice
 public class ExceptionHandle {
 
-    private final static Logger LOGGER= LoggerFactory.getLogger(ExceptionHandle.class);
+    private final Logger LOGGER= LoggerFactory.getLogger(ExceptionHandle.class);
 
     @ExceptionHandler(value = Exception.class)
     @ResponseBody
@@ -24,8 +27,8 @@ public class ExceptionHandle {
             BaseException mye = (BaseException) e;
             return GlobalResultUtil.error(mye.getCode(), mye.getMessage());
         } else {
-            LOGGER.error("【系统异常】{}",e);
-            return GlobalResultUtil.error(-1, "未知错误");
+            LOGGER.error(ResultEnum.LOG_ERROR.getMsg(),e);
+            return GlobalResultUtil.error(ResultEnum.UNKONW_ERROR.getCode(), ResultEnum.UNKONW_ERROR.getMsg());
         }
     }
 

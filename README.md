@@ -1,4 +1,4 @@
-＃springboot-dubbo-zookeeper-parent spring boot多模块
+＃springboot-dubbo-zookeeper-seckill spring boot多模块 秒杀业务
 
 
 多模块化项目 
@@ -26,7 +26,23 @@
         FileUtils   用于文件的操作 如复制 等
         
     /service   服务接口类 提供所有服务的接口
-   
+    
+
+
+## 添加秒杀Seckill 相关内容
+    
+    秒杀业务功能
+            1.秒杀商品列表
+            2.秒杀商品详情
+            3.用户执行秒杀
+            4.秒杀结果
+    
+    dao功能
+            1.查询秒杀列表
+            2.查询所有秒杀        
+            3.插入秒杀记录
+            4.更新库存
+    
         
         
    

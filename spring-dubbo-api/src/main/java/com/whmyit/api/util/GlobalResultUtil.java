@@ -10,8 +10,8 @@ import com.whmyit.api.common.GlobalResult;
  */
 public class GlobalResultUtil {
 
-    public static GlobalResult success(Object obj){
-        GlobalResult reuslt = new GlobalResult();
+    public static GlobalResult<Object> success(Object obj){
+        GlobalResult<Object> reuslt = new GlobalResult<Object>();
         reuslt.setCode(ResultEnum.SUCCESS.getCode());
         reuslt.setMsg(ResultEnum.SUCCESS.getMsg());
         reuslt.setData(obj);

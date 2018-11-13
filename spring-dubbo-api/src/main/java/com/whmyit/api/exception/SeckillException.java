@@ -1,17 +1,17 @@
-package com.whmyit.api.common;
+package com.whmyit.api.exception;
 
-import com.whmyit.api.Enum.ResultEnum;
+import com.whmyit.api.Enum.SeckillEnum;
 
 /**
  * @Author: whmyit@163.com
  * @Description: 自定义异常
  * @Date: Created in 15:22  2018/10/29
  */
-public class MyException extends BaseException {
+public class SeckillException extends BaseException {
 
     private Integer code;
 
-    public MyException (ResultEnum resultEnum){
+    public SeckillException(SeckillEnum resultEnum){
         super(resultEnum.getMsg());
         this.code = resultEnum.getCode();
     }

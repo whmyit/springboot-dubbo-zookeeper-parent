@@ -1,10 +1,8 @@
-package com.whmyit.api.common;
-
-import com.whmyit.api.Enum.ResultEnum;
+package com.whmyit.api.exception;
 
 /**
  * @Author: whmyit@163.com
- * @Description: 自定义异常
+ * @Description: 自定义异常父类
  * @Date: Created in 15:22  2018/10/29
  */
 public class BaseException extends RuntimeException {
@@ -13,11 +11,6 @@ public class BaseException extends RuntimeException {
 
     BaseException(String msg){
         super(msg);
-    }
-
-    public BaseException(ResultEnum resultEnum){
-        super(resultEnum.getMsg());
-        this.code = resultEnum.getCode();
     }
 
     public Integer getCode() {

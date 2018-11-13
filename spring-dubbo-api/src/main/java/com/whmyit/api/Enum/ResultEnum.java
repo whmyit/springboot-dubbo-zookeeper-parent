@@ -6,8 +6,9 @@ package com.whmyit.api.Enum;
  * @Date: Created in 17:22  2018/10/30
  */
 public enum ResultEnum  {
-    UNKONW_ERROR(-1,"位置错误"),
+    UNKONW_ERROR(-1,"未知错误"),
     SUCCESS(0,"成功"),
+    LOG_ERROR(-1, "【系统异常】{ }"),
     ;
     private Integer code;
     private String  msg;

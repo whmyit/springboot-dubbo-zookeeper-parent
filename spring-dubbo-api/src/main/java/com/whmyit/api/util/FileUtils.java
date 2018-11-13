@@ -1,7 +1,6 @@
 package com.whmyit.api.util;
 
 import com.whmyit.api.constant.ConstChar;
-import com.whmyit.api.entity.SysInfo;
 
 import java.io.*;
 

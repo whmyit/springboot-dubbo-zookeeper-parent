@@ -1,5 +1,6 @@
-package com.whmyit.api.common;
+package com.whmyit.api.handle;
 
+import com.whmyit.api.common.GlobalResult;
 import com.whmyit.api.util.GlobalResultUtil;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
