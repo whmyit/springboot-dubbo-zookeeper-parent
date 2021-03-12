@@ -1,0 +1,17 @@
+
+server:
+  port: 8085
+##HTTP相关配置
+spring:
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  messages:
+    encoding: UTF-8
+  profiles:
+    active: dev
+## banner
+banner:
+  charset: UTF-8

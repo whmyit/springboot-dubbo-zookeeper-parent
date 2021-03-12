@@ -1,0 +1,10 @@
+## 线上环境
+## 线上数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: mysql://172.21.0.3:3306/mydb?useUnicode=true&characterEncoding=utf-8
+    username: MyDB
+    password: 521kaili1314A
+logging:
+  config: classpath:logback-prod.xml

@@ -1,0 +1,10 @@
+## 测试环境
+## 测试数据库连接
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: "jdbc://82.156.30.239:3306/mydb?useUnicode=true&characterEncoding=utf-8"
+    username: "root"
+    password: ",whMYtx123@AA"
+logging:
+  config: classpath:logback-dev.xml
